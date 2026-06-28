@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Mulish:wght@400;600&display=swap");
+
+:root {
+  --bg-color: #fff5ee;
+  --text-color: #673147;
+  --title-color: #7d9920;
+  --accent-color: #7ea67c;
+  --accent-light: #a3c1ad;
+  --card-bg-color: #d8bfd8;
+  --border-color: #c9a9a6;
+
+  --section-about-bg: #fdf0f6;
+  --section-projects-bg: #f1f6ed;
+  --section-contact-bg: #fdf0f6;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1b2418;
+  --text-color: #f5e6e8;
+  --title-color: #e2c4c9;
+  --accent-color: #d8bfd8;
+  --accent-light: #a3c1ad;
+  --card-bg-color: #2d3a2a;
+  --border-color: #41543d;
+
+  --section-about-bg: #221a20;
+  --section-projects-bg: #1c2419;
+  --section-contact-bg: #221a20;
+}
+
+body {
+  font-family: "Mulish", "helvetica", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", "Georgia", serif;
+}
+
+h1 {
+  color: var(--title-color);
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo style du header  */
+header {
+  font-family: "Mulish", "arial", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--card-bg-color);
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  unicode-bidi: isolate;
+}
+.header-nav {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-right: auto;
+  padding: 0;
+}
+
+header a {
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--accent-color);
+}
+
+.header-function {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.language-switch,
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang,
+.theme {
+  cursor: pointer;
+  padding: 2px 5px;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang.active {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.separator {
+  color: var(--border-color);
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo blocs de couleur par section différentee */
+
+.section {
+  padding: 80px 20px;
+  box-shadow: inset 0 8px 12px -10px rgba(0, 0, 0, 0.15);
+}
+
+#about {
+  background-color: var(--section-about-bg);
+}
+
+#projects {
+  background-color: var(--section-projects-bg);
+}
+
+#contact {
+  background-color: var(--section-contact-bg);
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo style pour la section à propos / about */
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  padding-top: 120px;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* coté gauche du about */
+.about-left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 380px;
+  margin-top: 20px;
+  border: 6px solid var(--card-bg-color);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* coté droite du about */
+
+.education-title {
+  margin-bottom: 30px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+}
+
+.education-list li {
+  background: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo section des projets */
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project article {
+  text-align: center;
+}
+
+.project-title {
+  color: var(--title-color);
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent-light);
+  display: table;
+  padding-bottom: 6px;
+  margin: 0 auto;
+}
+
+.project > .date {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project > h4 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--title-color);
+  margin-bottom: 1px;
+}
+
+.project-description {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.project-description p {
+  text-align: justify;
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo carousel images qui fonctionne */
+
+.slider-container {
+  overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.images {
+  overflow-x: hidden;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  animation: scroll 55s linear infinite;
+}
+
+.images::-webkit-scrollbar {
+  display: none;
+}
+
+.images img {
+  width: 500px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.image-container {
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 500px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo pour la video des chaebols */
+
+.video-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.video-container video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo section contact */
+
+#contact {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+#contact p {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo footer et mentions légales */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.mentions-legales {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  h2 {
+    color: var(--title-color);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo responsive */
+
+@media (max-width: 768px) {
+  .header-nav {
+    gap: 15px;
+  }
+
+  .header-nav ul {
+    gap: 15px;
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  #about {
+    padding-top: 160px;
+  }
+
+  .profile-picture {
+    width: 260px;
+  }
+
+  .profile-image {
+    height: 260px;
+  }
+
+  .image-container img,
+  .images img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .project > h4 {
+    font-size: 1.8rem;
+  }
+}
