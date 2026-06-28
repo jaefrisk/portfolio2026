@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const langueSauvegardee = localStorage.getItem("portfolio_langue") || "fr";
   applylang(langueSauvegardee);
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////// pop up pour les mentions légales
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////// pop up pour les mentions légales - faut que ça marche
   const openModalBtn = document.getElementById("open-Modal-Btn");
   const closeModalBtn = document.getElementById("close-Modal");
   const legalModal = document.getElementById("legalModal");
